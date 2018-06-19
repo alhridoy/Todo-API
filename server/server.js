@@ -25,9 +25,9 @@ var todo = new Todo({
 //another route 
 
 app.get('/todos', (req,res)=>{
-
+  //fins all of the todos in the database
     Todo.find().then((todos)=>{
-   res.send({todos})
+   res.send({todos});
     },(e)=>{
         res.status(400).send(e);
     })
